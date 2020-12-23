@@ -99,8 +99,8 @@ const App = () => {
   return (
     <>
       <Layout>
-        <Header align='center' style={{ paddingTop: '0.5rem' }}>
-          <Title style={{ color: 'white' }}>
+        <Header style={{ paddingTop: '0.5rem' }}>
+          <Title style={{ color: 'white', textAlign: 'center' }}>
             <TeamOutlined /> Employees CRUD
           </Title>
         </Header>
