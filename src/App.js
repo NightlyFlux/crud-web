@@ -101,7 +101,7 @@ const App = () => {
       <Layout>
         <Header style={{ paddingTop: '0.5rem' }}>
           <Title style={{ color: 'white', textAlign: 'center' }}>
-            <TeamOutlined /> Employees CRUD
+            <TeamOutlined /> Employees CRUD App
           </Title>
         </Header>
 
