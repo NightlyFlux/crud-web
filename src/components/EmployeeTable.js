@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.css'
 import { Button, Popconfirm, Table } from 'antd'
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
 
@@ -82,6 +83,7 @@ const EmployeeTable = ({
       loading={loading}
       pagination={false}
       rowKey='id'
+      style={{ overflow: 'auto' }}
     />
   )
 }

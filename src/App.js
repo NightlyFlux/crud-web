@@ -99,7 +99,7 @@ const App = () => {
   return (
     <>
       <Layout>
-        <Header style={{ paddingTop: '0.5rem' }}>
+        <Header style={{ paddingTop: '0.5rem', height: 'auto' }}>
           <Title style={{ color: 'white', textAlign: 'center' }}>
             <TeamOutlined /> Employees CRUD App
           </Title>
@@ -107,6 +107,7 @@ const App = () => {
 
         <Content style={{ padding: '0 1rem' }}>
           <Button
+            block
             type='primary'
             icon={<UserAddOutlined />}
             style={{ margin: '1rem 0' }}
