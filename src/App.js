@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import http from './api'
-import 'antd/dist/antd.css'
-import { Button, Form, Input, Layout, Modal, Radio } from 'antd'
 import { TeamOutlined, UserAddOutlined } from '@ant-design/icons'
+import { Button, Form, Input, Layout, Modal, Radio } from 'antd'
+import 'antd/dist/antd.css'
 import { Content, Footer, Header } from 'antd/lib/layout/layout'
 import Title from 'antd/lib/typography/Title'
+import { useEffect, useState } from 'react'
+import http from './api'
 import EmployeeTable from './components/EmployeeTable'
 
 const App = () => {
@@ -50,7 +50,6 @@ const App = () => {
         role_id,
       })
       .then(({ status }) => {
-        debugger
         if (status === 200) {
           loadEmployees()
           closeModal()
@@ -111,7 +110,8 @@ const App = () => {
             type='primary'
             icon={<UserAddOutlined />}
             style={{ margin: '1rem 0' }}
-            onClick={showModal}>
+            onClick={showModal}
+          >
             Add Employee
           </Button>
           <EmployeeTable
@@ -127,9 +127,10 @@ const App = () => {
           Made by
           <Button
             type='link'
-            href='https://nightlyflux.tk'
+            href='https://salvadorgomez.ga'
             target='_blank'
-            size='small'>
+            size='small'
+          >
             Salvador Gómez
           </Button>
         </Footer>
@@ -149,12 +150,14 @@ const App = () => {
             })
         }}
         onCancel={closeModal}
-        centered>
+        centered
+      >
         <Form
           form={form}
           layout='vertical'
           name='EmployeeForm'
-          initialValues={{ role_id: 1 }}>
+          initialValues={{ role_id: 1 }}
+        >
           <Form.Item
             name='name'
             label='Name'
@@ -163,7 +166,8 @@ const App = () => {
                 required: true,
                 message: 'Please input your name!',
               },
-            ]}>
+            ]}
+          >
             <Input />
           </Form.Item>
           <Form.Item
@@ -174,7 +178,8 @@ const App = () => {
                 required: true,
                 message: 'Please input your email!',
               },
-            ]}>
+            ]}
+          >
             <Input type='email' />
           </Form.Item>
           <Form.Item
@@ -185,7 +190,8 @@ const App = () => {
                 required: true,
                 message: 'Please input your address!',
               },
-            ]}>
+            ]}
+          >
             <Input />
           </Form.Item>
           <Form.Item
@@ -196,7 +202,8 @@ const App = () => {
                 required: true,
                 message: 'Please input your phone number!',
               },
-            ]}>
+            ]}
+          >
             <Input type='tel' />
           </Form.Item>
           <Form.Item name='role_id' label='Role' style={{ marginBottom: 0 }}>

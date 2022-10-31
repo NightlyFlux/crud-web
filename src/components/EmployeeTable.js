@@ -6,7 +6,6 @@ import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
 const EmployeeTable = ({
   employees,
   loading,
-  showModal,
   setCurrentId,
   deleteEmployee,
 }) => {
